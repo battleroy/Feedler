@@ -1,0 +1,15 @@
+//
+//  Feedler.pch
+//  Feedler
+//
+//  Created by Yauheni Chasavitsin on 15/09/16.
+//  Copyright © 2016 YC. All rights reserved.
+//
+
+#ifndef Feedler_pch
+#define Feedler_pch
+
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
+#endif /* Feedler_pch */
