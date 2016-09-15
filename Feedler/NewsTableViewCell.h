@@ -11,11 +11,6 @@
 
 @interface NewsTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *newsImageView;
-@property (weak, nonatomic) IBOutlet UILabel *newsHeadlineLabel;
-@property (weak, nonatomic) IBOutlet UILabel *publishDateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *shortDescriptionLabel;
-
 - (void)updateWithNews:(News *)news;
 + (CGFloat)cellHeightForNews:(News *)news cellWidth:(CGFloat)width;
 

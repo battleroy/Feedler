@@ -16,10 +16,13 @@
 
 @implementation AppDelegate
 
+#define FEEDLER_STORE_NAME @"Feedler.sqlite"
+#define RSS_MIME_TYPE @"application/rss+xml"
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"Feedler.sqlite"];
-    [RKMIMETypeSerialization registerClass:[RKXMLDictionarySerialization class] forMIMEType:@"application/rss+xml"];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:FEEDLER_STORE_NAME];
+    [RKMIMETypeSerialization registerClass:[RKXMLDictionarySerialization class] forMIMEType:RSS_MIME_TYPE];
     
     return YES;
 }

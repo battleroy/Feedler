@@ -114,8 +114,8 @@
 			children = (
 				F56A5DA41D89507400AAE275 /* Managers */,
 				F56A5DA81D8950E100AAE275 /* Model */,
+				F5CEFD261D8AA07A00DBD45C /* Scenes */,
 				F56A5D9F1D894D8300AAE275 /* View */,
-				F56A5D9E1D894D6700AAE275 /* VC */,
 				F5442A8D1D8945BB00A8BFEC /* Assets.xcassets */,
 				F5442A921D8945BB00A8BFEC /* Info.plist */,
 				F5442A811D8945BB00A8BFEC /* Supporting Files */,
@@ -134,21 +134,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F56A5D9E1D894D6700AAE275 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				F5442A871D8945BB00A8BFEC /* FeedViewController.h */,
-				F5442A881D8945BB00A8BFEC /* FeedViewController.m */,
-				F517E58B1D89C01E00A51ED8 /* NewsViewController.h */,
-				F517E58C1D89C01E00A51ED8 /* NewsViewController.m */,
-			);
-			name = VC;
-			sourceTree = "<group>";
-		};
 		F56A5D9F1D894D8300AAE275 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F56A5DA01D894DC800AAE275 /* Cells */,
 				F5442A8A1D8945BB00A8BFEC /* Main.storyboard */,
 				F5442A8F1D8945BB00A8BFEC /* LaunchScreen.storyboard */,
 			);
@@ -183,6 +171,34 @@
 				F56A5DAC1D89514300AAE275 /* FeedlerModel.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F5CEFD261D8AA07A00DBD45C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F5CEFD281D8AA08800DBD45C /* News */,
+				F5CEFD271D8AA07F00DBD45C /* Feed */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		F5CEFD271D8AA07F00DBD45C /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F5442A871D8945BB00A8BFEC /* FeedViewController.h */,
+				F5442A881D8945BB00A8BFEC /* FeedViewController.m */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		F5CEFD281D8AA08800DBD45C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				F56A5DA01D894DC800AAE275 /* Cells */,
+				F517E58B1D89C01E00A51ED8 /* NewsViewController.h */,
+				F517E58C1D89C01E00A51ED8 /* NewsViewController.m */,
+			);
+			name = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

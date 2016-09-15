@@ -15,10 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface News (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *title;
-@property (nullable, nonatomic, retain) NSString *newsLink;
+@property (nonnull, nonatomic, retain) NSString *title;
+@property (nonnull, nonatomic, retain) NSString *newsLink;
 @property (nullable, nonatomic, retain) NSString *newsDescription;
-@property (nullable, nonatomic, retain) NSDate *publishDate;
+@property (nonnull, nonatomic, retain) NSDate *publishDate;
 @property (nullable, nonatomic, retain) NSString *imageLink;
 
 @end

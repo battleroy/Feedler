@@ -30,7 +30,8 @@
     [super viewDidLoad];
     
     _refreshControl = [UIRefreshControl new];
-    [_refreshControl addTarget:self action:@selector(updateData) forControlEvents:UIControlEventValueChanged];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self action:@selector(updateData) forControlEvents:UIControlEventValueChanged];
     
     [self.newsTableView addSubview:self.refreshControl];
 }
@@ -49,12 +50,12 @@
     [self.refreshControl beginRefreshing];
     
     APIManager *manager = [APIManager sharedInstance];
-    [manager newsFromDate:[NSDate dateWithTimeIntervalSinceNow:-24 * 60 * 60] success:^(NSArray<News *> *news) {
+    [manager refreshNewsWithSuccess:^(NSArray<News *> *news) {
         self.newsArray = news;
-        [self.refreshControl endRefreshing];
         [self.newsTableView reloadData];
+        [self.refreshControl endRefreshing];
     } error:^(NSString *errorText) {
-        NSLog(@"Error: %@", errorText);
+        NSLog(@"Feed refresh error: %@", errorText);
         [self.refreshControl endRefreshing];
     }];
 }

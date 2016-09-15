@@ -7,7 +7,7 @@
 //
 
 #import "NewsViewController.h"
-#import <AFNetworking/UIImageView+AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 
 @interface NewsViewController () <UIWebViewDelegate>
 
@@ -40,9 +40,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.newsPageWebView.delegate = self;
     
+    self.newsPageWebView.delegate = self;    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self update];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self.newsPageWebView stopLoading];
 }
 
 #pragma mark - Update
@@ -77,7 +88,9 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    
+    NSLog(@"NewsWebView load fail: %@", error.localizedDescription);
 }
+
+#pragma mark - Reachability
 
 @end

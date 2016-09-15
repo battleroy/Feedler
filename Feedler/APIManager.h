@@ -13,8 +13,7 @@
 
 + (instancetype)sharedInstance;
 
-- (void)newsFromDate:(NSDate *)from
-             success:(void(^)(NSArray<News *> *news))successBlock
-               error:(void(^)(NSString *errorText))errorBlock;
+- (void)refreshNewsWithSuccess:(void(^)(NSArray<News *> *news))successBlock
+                         error:(void(^)(NSString *errorText))errorBlock;
 
 @end

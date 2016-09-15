@@ -9,6 +9,15 @@
 #import "NewsTableViewCell.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
 
+@interface NewsTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *newsImageView;
+@property (weak, nonatomic) IBOutlet UILabel *newsHeadlineLabel;
+@property (weak, nonatomic) IBOutlet UILabel *publishDateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *shortDescriptionLabel;
+
+@end
+
 @implementation NewsTableViewCell
 
 #pragma mark - Formatters
@@ -71,9 +80,12 @@
     return CGRectGetHeight(CGRectIntegral(rect));
 }
 
+static const CGFloat VIEW_OFFSET = 8.0f;
+static const CGFloat IMAGE_SIDE = 64.0f;
+
 + (CGFloat)cellHeightForNews:(News *)news cellWidth:(CGFloat)width
 {
-    CGFloat givenWidth = width - 8.0f * 3 - 64.0f;
+    CGFloat givenWidth = width - VIEW_OFFSET * 3 - IMAGE_SIDE;
     
     CGFloat textHeight = 0.0f;
     
@@ -85,13 +97,13 @@
                                                    font:[NewsTableViewCell dateFont]
                                                   width:givenWidth];
     
-    textHeight += 8.0f;
+    textHeight += VIEW_OFFSET;
     
     textHeight += [NewsTableViewCell labelHeightForText:news.newsDescription
                                                    font:[NewsTableViewCell descriptionFont]
                                                   width:givenWidth];
     
-    return ceil(8.0f * 2 + MAX(64.0f, textHeight));
+    return ceil(VIEW_OFFSET * 2 + MAX(IMAGE_SIDE, textHeight));
 }
 
 @end
