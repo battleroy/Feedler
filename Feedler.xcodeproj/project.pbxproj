@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C7357F342557FD88FFCEAD2C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A333B72F0E51453AF961AD /* libPods.a */; };
-		F517E58D1D89C01E00A51ED8 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F517E58C1D89C01E00A51ED8 /* NewsViewController.m */; };
+		F52AF7771D8D1DB500B7AEA2 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F52AF7751D8D1DB500B7AEA2 /* NewsViewController.m */; };
 		F5442A831D8945BB00A8BFEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5442A821D8945BB00A8BFEC /* main.m */; };
 		F5442A861D8945BB00A8BFEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5442A851D8945BB00A8BFEC /* AppDelegate.m */; };
 		F5442A891D8945BB00A8BFEC /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5442A881D8945BB00A8BFEC /* FeedViewController.m */; };
@@ -31,6 +31,8 @@
 		87A333B72F0E51453AF961AD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F517E58B1D89C01E00A51ED8 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = Assets.xcassets/NewsViewController.h; sourceTree = "<group>"; };
 		F517E58C1D89C01E00A51ED8 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = Assets.xcassets/NewsViewController.m; sourceTree = "<group>"; };
+		F52AF7751D8D1DB500B7AEA2 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		F52AF7761D8D1DB500B7AEA2 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		F5442A7E1D8945BB00A8BFEC /* Feedler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feedler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5442A821D8945BB00A8BFEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F5442A841D8945BB00A8BFEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -195,8 +197,10 @@
 			isa = PBXGroup;
 			children = (
 				F56A5DA01D894DC800AAE275 /* Cells */,
-				F517E58B1D89C01E00A51ED8 /* NewsViewController.h */,
+				F52AF7761D8D1DB500B7AEA2 /* NewsViewController.h */,
+				F52AF7751D8D1DB500B7AEA2 /* NewsViewController.m */,
 				F517E58C1D89C01E00A51ED8 /* NewsViewController.m */,
+				F517E58B1D89C01E00A51ED8 /* NewsViewController.h */,
 			);
 			name = News;
 			sourceTree = "<group>";
@@ -328,7 +332,7 @@
 				F56A5DB31D8951C800AAE275 /* News+CoreDataProperties.m in Sources */,
 				F56A5DAE1D89514300AAE275 /* FeedlerModel.xcdatamodeld in Sources */,
 				F5442A831D8945BB00A8BFEC /* main.m in Sources */,
-				F517E58D1D89C01E00A51ED8 /* NewsViewController.m in Sources */,
+				F52AF7771D8D1DB500B7AEA2 /* NewsViewController.m in Sources */,
 				F56A5DB41D8951C800AAE275 /* News.m in Sources */,
 				F56A5DA71D89508500AAE275 /* APIManager.m in Sources */,
 			);

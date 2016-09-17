@@ -91,6 +91,4 @@
     NSLog(@"NewsWebView load fail: %@", error.localizedDescription);
 }
 
-#pragma mark - Reachability
-
 @end
